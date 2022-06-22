@@ -1,4 +1,19 @@
-folder('App') {
-    displayName('App')
-    description('Folder for App')
+pipelineJob('App/New_Job') {
+  definition {
+    cps {
+    	script (''' 
+			pipeline { 
+				agent any
+				stages {
+					stage ('creating a folder') {
+						steps{ 
+							echo "Welcome"
+}
+}
+}
+}
+
+''')
+    }
+  }
 }
