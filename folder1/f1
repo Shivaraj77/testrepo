@@ -1,0 +1,25 @@
+
+folder('Folder-A') {
+    displayName('Folder-A')
+    description('Folder for Newjob')
+}
+
+pipelineJob('Folder-A/New_Job') {
+  definition {
+    cps {
+    	script (''' 
+pipeline { 
+				agent any
+				stages {
+					stage ('creating a folder') {
+						steps{ 
+							echo "Welcome"
+}
+}
+}
+}
+
+''')
+    }
+  }
+}
