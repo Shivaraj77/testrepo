@@ -1,0 +1,10 @@
+pipelineJob('project-a/New_Job') {
+  definition {
+    cps {
+    	script (''' 
+
+
+''')
+    }
+  }
+}
