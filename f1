@@ -1,3 +1,7 @@
+pipelineJob('project-a/New_Job') {
+  definition {
+    cps {
+    	script (''' 
 pipeline { 
 				agent any
 				stages {
@@ -7,4 +11,9 @@ pipeline {
 }
 }
 }
+}
+
+''')
+    }
+  }
 }
