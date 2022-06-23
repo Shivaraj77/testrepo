@@ -1,8 +1,4 @@
-pipelineJob('App/New_Job') {
-  definition {
-    cps {
-    	script (''' 
-			pipeline { 
+pipeline { 
 				agent any
 				stages {
 					stage ('creating a folder') {
@@ -11,9 +7,4 @@ pipelineJob('App/New_Job') {
 }
 }
 }
-}
-
-''')
-    }
-  }
 }
