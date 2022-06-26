@@ -1,3 +1,7 @@
+pipelineJob('App/New_Job') {
+  definition {
+    cps {
+    	script (''' 
 pipeline { 
 				agent any
 				stages {
@@ -7,4 +11,8 @@ pipeline {
 }
 }
 }
+}
+''')
+    }
+  }
 }
