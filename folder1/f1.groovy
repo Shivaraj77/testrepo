@@ -4,18 +4,18 @@ folder('Folder-A') {
     description('Folder for Newjob')
 }
 folder('Folder-A/BACKUP') {
-    displayName('Folder-A')
+    displayName('BACKUP')
     description('Folder for Newjob')
 }
 folder('Folder-A/BACKUP/MSF') {
-    displayName('Folder-A')
+    displayName('MSF')
     description('Folder for Newjob')
 }
 folder('Folder-A/BACKUP/MSR') {
-    displayName('Folder-A')
+    displayName('MSR')
     description('Folder for Newjob')
 }
 folder('Folder-A/BACKUP/MSR/DEV') {
-    displayName('Folder-A')
+    displayName('DEV')
     description('Folder for Newjob')
 }
