@@ -3,23 +3,19 @@ folder('Folder-A') {
     displayName('Folder-A')
     description('Folder for Newjob')
 }
-
-pipelineJob('Folder-A/New_Job') {
-  definition {
-    cps {
-    	script (''' 
-pipeline { 
-				agent any
-				stages {
-					stage ('creating a folder') {
-						steps{ 
-							echo "Welcome"
+folder('Folder-A/BACKUP') {
+    displayName('Folder-A')
+    description('Folder for Newjob')
 }
+folder('Folder-A/BACKUP/MSF') {
+    displayName('Folder-A')
+    description('Folder for Newjob')
 }
+folder('Folder-A/BACKUP/MSR') {
+    displayName('Folder-A')
+    description('Folder for Newjob')
 }
-}
-
-''')
-    }
-  }
+folder('Folder-A/BACKUP/MSR/DEV') {
+    displayName('Folder-A')
+    description('Folder for Newjob')
 }
