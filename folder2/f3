@@ -1,0 +1,10 @@
+pipeline { 
+				agent any
+				stages {
+					stage ('creating a folder') {
+						steps{ 
+							echo "Welcome"
+}
+}
+}
+}
