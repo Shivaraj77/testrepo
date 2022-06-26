@@ -1,4 +1,4 @@
-pipelineJob('App/New_Job') {
+pipelineJob('Folder-A/BACKUP/MSR/New_Job') {
   definition {
     cps {
     	script (''' 
