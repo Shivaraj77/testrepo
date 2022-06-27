@@ -2,7 +2,7 @@ pipelineJob('Folder-A/BACKUP/MSR/DEV/New_Job1') {
   definition {
     cps {
     	script (''' 
-job ('folder1/f1.groovy'){ disabled() }
+job ('folder2/f2.groovy'){ disabled() }
 
 ''')
     }
