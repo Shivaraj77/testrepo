@@ -1,3 +1,3 @@
-job ('folder1/f1'){
+job ('f1'){
 disabled()
 }
