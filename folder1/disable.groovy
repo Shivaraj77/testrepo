@@ -1,3 +1,3 @@
 
-job ('folder2/f2'){ disabled() }
+job ('Folder-A/BACKUP/MSR/DEV/New_Job1'){ disabled() }
 
