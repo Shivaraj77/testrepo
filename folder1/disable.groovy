@@ -1,3 +1,3 @@
-job('Folder-A/BACKUP/MSR/New_Job'){
-  disabled(true)
+pipelinejob('Folder-A/BACKUP/MSR/New_Job'){
+  disabled()
 }
