@@ -1,3 +1,3 @@
-job ('folder1/f1.groovy'){
+job ('folder1/f1'){
 disabled()
 }
