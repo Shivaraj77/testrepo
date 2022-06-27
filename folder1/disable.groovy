@@ -1,4 +1,4 @@
 
-job('New_Job1') {
+job('Folder-A/BACKUP/MSR/DEV/New_Job1') {
   disabled() 
 }
