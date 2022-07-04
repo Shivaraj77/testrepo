@@ -1,19 +1,9 @@
-pipelineJob('project-a/New_Job') {
-  definition {
-    cps {
-    	script (''' 
-pipeline { 
-				agent any
-				stages {
-					stage ('creating a folder') {
-						steps{ 
-							echo "Welcome"
-}
-}
-}
-}
-
-''')
+pipelineJob('example') {
+    definition {
+        cpsScm {
+            scm {
+                git('https://github.com/Shivaraj77/testrepo.git')
+            }
+        }
     }
-  }
 }
