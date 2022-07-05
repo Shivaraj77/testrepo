@@ -1,21 +1,28 @@
+import groovy.io.FileType
 
-folder('Folder-A') {
-    displayName('Folder-A')
-    description('Folder for Newjob')
+def list = []
+WORKSPACE_PATH = "WORKSPACE".replace("\\","/")
+
+
+def dir = new File("$(WORKSPACE_PATH)/JENKINS/JOBS")
+dir.eachFileRecurse (FileType.FILES) { file ->
+  list << file
 }
-folder('Folder-A/BACKUP') {
-    displayName('BACKUP')
-    description('Folder for Newjob')
-}
-folder('Folder-A/BACKUP/MSF') {
-    displayName('MSF')
-    description('Folder for Newjob')
-}
-folder('Folder-A/BACKUP/MSR') {
-    displayName('MSR')
-    description('Folder for Newjob')
-}
-folder('Folder-A/BACKUP/MSR/DEV') {
-    displayName('DEV')
-    description('Folder for Newjob')
+list.each {
+
+def TempPath = it.path.replace("\\","/")
+JenkinsJobpath = TempPath.replace("${WORKSPACE_PATH}/","")
+JenkinsJobPath = JenkinsJobPath.replace("JENKINS/JOBS/","")
+ScriptFilePath = TempPath.replace("./JENKINS","JENKINS")
+   pipelineJob(JenkinsJobPath) {
+   defination{
+        cps {
+             script(readFileFromWorkspace(ScriptFilePath))
+        }
+   }
+   
+   }
+
+
+
 }
