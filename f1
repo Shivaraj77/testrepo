@@ -1,9 +1,28 @@
-pipelineJob('example') {
-    definition {
-        cpsScm {
-            scm {
-                git('https://github.com/Shivaraj77/testrepo.git')
-            }
+import groovy.io.FileType
+
+def list = []
+WORKSPACE_PATH = "WORKSPACE".replace("\\","/")
+
+
+def dir = new File("$(WORKSPACE_PATH)/JENKINS/JOBS")
+dir.eachFileRecurse (FileType.FILES) { file ->
+  list << file
+}
+list.each {
+
+def TempPath = it.path.replace("\\","/")
+JenkinsJobpath = TempPath.replace("${WORKSPACE_PATH}/","")
+JenkinsJobPath = JenkinsJobPath.replace("JENKINS/JOBS/","")
+ScriptFilePath = TempPath.replace("./JENKINS","JENKINS")
+   pipelineJob(JenkinsJobPath) {
+   defination{
+        cps {
+             script(readFileFromWorkspace(ScriptFilePath))
         }
-    }
+   }
+   
+   }
+
+
+
 }
